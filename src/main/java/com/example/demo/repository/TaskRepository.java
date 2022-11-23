@@ -6,10 +6,11 @@ import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
 
+
 public interface TaskRepository extends MongoRepository<Task, String> {
 
     List<Task> findBySeverity(int severity);
 
-    @Query("{assignee: ?0 }")
+    @Query("{assignee: ?0 }")                        // @ is called annotation. For multiple field use @Query("{assignee: ?0 , severity: ?1 }")
     List<Task> getTasksByAssignee(String assignee);
 }

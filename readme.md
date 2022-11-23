@@ -1,4 +1,36 @@
+#### Project Setup 
+Go to start.spring.io, choose the below settings and download the zip file
 
+> Lombok - is a Java annotation library which helps to reduce boilerplate code.
+> Spring mongodb - is the mongodb dependency
+
+
+![](../../../Desktop/sp.png)
+
+
+---
+
+#### Conencting java app to mongodb
+In the `src/main/resources` folder create an `application.yml` file and configure
+```yml
+spring:
+  data:
+    mongodb:
+      uri : mongodb+srv://<dbname>:<db password>@it8.fccieaj.mongodb.net/?retryWrites=true&w=majority
+      database: Task
+```
+
+---
+
+#### Change the port number of app
+In the `src/main/resources/application.properties` add the port
+```
+server.port=7000
+
+```
+
+##### Folders (packages to create) and flow
+> model -> repository -> service -> controller
 
 #### Create a new task
 > localhost:7000/tasks POST

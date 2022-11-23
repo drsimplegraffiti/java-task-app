@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "tasks")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task {
-    @Id
+    @Id                   // @Id is set as primary key
     private String taskId;
     private String description;
     private int severity;

@@ -13,7 +13,7 @@ import java.util.List;
 public class TaskController {
 
     @Autowired
-    private TaskService service;
+    private TaskService service; // import task service
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -44,11 +44,13 @@ public class TaskController {
 
     @PutMapping
     public Task modifyTask(@RequestBody Task task){
+
         return service.updateTask(task);
     }
 
     @DeleteMapping("/{taskId}")
     public String deleteTask(@PathVariable String taskId){
+
         return service.deleteTask(taskId);
     }
 

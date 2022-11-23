@@ -12,7 +12,7 @@ import java.util.UUID;
 public class TaskService {
 
     @Autowired
-    private TaskRepository repository;
+    private TaskRepository repository; // import the service repository
 
     // CRUD -> CREATE, READ, UPDATE, DELETE
 
@@ -22,27 +22,27 @@ public class TaskService {
         return repository.save(task);
     }
 
-    // GET ALL TASK
+    // GET ALL TASK METHOD
     public List<Task> findAllTasks() {
         return repository.findAll();
     }
 
-    // GET SINGLE TASK
+    // GET SINGLE TASK METHOD
     public Task getTaskByTaskId(String taskId) {
         return repository.findById(taskId).get();
     }
 
-    // GET TASK BY SEVERITY
+    // GET TASK BY SEVERITY METHOD
     public List<Task> getTaskBySeverity(int severity) {
-        return repository.findBySeverity(severity);
+        return repository.findBySeverity(severity); // this is our custom find method
     }
 
-    // GET TASK BY ASSIGNEE
+    // GET TASK BY ASSIGNEE METHOD
     public List<Task> getTaskByAssignee(String assignee) {
-        return repository.getTasksByAssignee(assignee);
+        return repository.getTasksByAssignee(assignee); // custom method for query
     }
 
-    // UPDATE TASK
+    // UPDATE TASK METHOD
     public Task updateTask(Task taskRequest) {
         // get the existing document from DB
         // populate the new value from request to existing object/entity/document
