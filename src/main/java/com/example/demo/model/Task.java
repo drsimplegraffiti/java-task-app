@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Document(collection = "tasks") // collection name in MongoDB database is "tasks"
 @Data // lombok annotation to generate getters and setters
 @AllArgsConstructor // generates constructor with all fields
@@ -17,6 +19,9 @@ public class Task {
     private int severity;
     private String assignee;
     private int storyPoint;
+    private Date createdDate = new Date();
+    private Date updatedDate = new Date(); // default value is current date
+
 }
 
 

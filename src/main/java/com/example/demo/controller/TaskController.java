@@ -19,12 +19,12 @@ public class TaskController {
     @ResponseStatus(HttpStatus.CREATED) // @ResponseStatus annotation is used to set the response status code.
     public Task createTask(@RequestBody Task task) {
         return service.addTask(task);
-    }
+    } //@RequestBody annotation binds the HTTP request body with a domain object in method parameter or return type.
 
     @GetMapping // @GetMapping annotation handles the HTTP GET requests matched with given URI expression.
     public List<Task> getTasks() { // get all tasks
 
-        return service.findAllTasks();
+        return service.findAllTasks(); // return all the tasks
     }
 
     @GetMapping("/{taskId}") // @PathVariable annotation is used to bind a method parameter or method return value to a URI template variable.
@@ -38,7 +38,7 @@ public class TaskController {
         return service.getTaskBySeverity(severity);
     }
 
-    @GetMapping("/assignee/{assignee}")
+    @GetMapping("/assignee/{assignee}") // @PathVariable annotation is used to bind a method parameter or method return value to a URI template variable.
     public List<Task> getTaskByAssignee(@PathVariable String assignee){
         return service.getTaskByAssignee(assignee);
     }
@@ -52,7 +52,7 @@ public class TaskController {
     @DeleteMapping("/{taskId}") // @DeleteMapping annotation handles the HTTP DELETE requests matched with given URI expression.
     public String deleteTask(@PathVariable String taskId){
 
-        return service.deleteTask(taskId);
+        return service.deleteTask(taskId); // return the deleted task id
     }
 
 }
