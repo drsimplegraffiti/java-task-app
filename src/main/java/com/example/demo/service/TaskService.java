@@ -25,7 +25,7 @@ public class TaskService { // Service class for Task
     // GET ALL TASK METHOD
     public List<Task> findAllTasks() {
 
-        return repository.findAll(); // return all the tasks
+        return repository.findAll();
     }
 
     // GET SINGLE TASK METHOD

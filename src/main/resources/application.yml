@@ -1,5 +1,5 @@
 spring: # Spring Boot configuration properties
   data: # Spring Data configuration properties
     mongodb: # MongoDB configuration properties
-      uri : mongodb+srv://<replace_db_name>:<replace_with_password>@it8.fccieaj.mongodb.net/?retryWrites=true&w=majority # replace with your db name and password
+      uri : mongodb+srv://<db_username_here>:<db_password>@it8.fccieaj.mongodb.net/?retryWrites=true&w=majority # replace with your db name and password
       database: Task # Database name

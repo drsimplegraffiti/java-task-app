@@ -23,8 +23,7 @@ public class TaskController {
 
     @GetMapping // @GetMapping annotation handles the HTTP GET requests matched with given URI expression.
     public List<Task> getTasks() { // get all tasks
-
-        return service.findAllTasks(); // return all the tasks
+        return service.findAllTasks();
     }
 
     @GetMapping("/{taskId}") // @PathVariable annotation is used to bind a method parameter or method return value to a URI template variable.
