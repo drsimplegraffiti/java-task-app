@@ -43,13 +43,13 @@ public class TaskController {
         return service.getTaskByAssignee(assignee);
     }
 
-    @PutMapping
+    @PutMapping // @PutMapping annotation handles the HTTP PUT requests matched with given URI expression.
     public Task modifyTask(@RequestBody Task task){
 
         return service.updateTask(task);
     }
 
-    @DeleteMapping("/{taskId}")
+    @DeleteMapping("/{taskId}") // @DeleteMapping annotation handles the HTTP DELETE requests matched with given URI expression.
     public String deleteTask(@PathVariable String taskId){
 
         return service.deleteTask(taskId);

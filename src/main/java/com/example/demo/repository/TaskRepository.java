@@ -12,6 +12,6 @@ public interface TaskRepository extends MongoRepository<Task, String> { // Task 
 
     List<Task> findBySeverity(int severity); // custom method to find by severity level (severity is the field name in Task model class)
 
-    @Query("{assignee: ?0 }")                        // @ is called annotation. For multiple field use @Query("{assignee: ?0 , severity: ?1 }")
+    @Query("{assignee: ?0 }")                        // @ is called annotation. For multiple field use @Query("{assignee: ?0 , severity: ?1 }") and pass two parameters in the method
     List<Task> getTasksByAssignee(String assignee); // custom method to find by assignee (assignee is the field name in Task model class)
 }
