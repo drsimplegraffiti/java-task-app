@@ -1,5 +1,5 @@
 spring:
   data:
     mongodb:
-#      uri : mongodb+srv://<replace_db_name>:<replace_with_password>@it8.fccieaj.mongodb.net/?retryWrites=true&w=majority
-#      database: Task
+      uri : mongodb+srv://<replace_db_name>:<replace_with_password>@it8.fccieaj.mongodb.net/?retryWrites=true&w=majority
+      database: Task

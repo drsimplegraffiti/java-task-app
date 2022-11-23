@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class TaskService {
+public class TaskService { // Service class for Task
 
-    @Autowired
+    @Autowired // Autowired annotation is used to inject the object dependency implicitly.
     private TaskRepository repository; // import the service repository
 
     // CRUD -> CREATE, READ, UPDATE, DELETE
@@ -24,7 +24,8 @@ public class TaskService {
 
     // GET ALL TASK METHOD
     public List<Task> findAllTasks() {
-        return repository.findAll();
+
+        return repository.findAll(); // return all the tasks
     }
 
     // GET SINGLE TASK METHOD

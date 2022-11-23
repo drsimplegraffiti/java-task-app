@@ -8,25 +8,26 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController  // @RestController annotation is used to create RESTful web services using Spring MVC.
 @RequestMapping("/tasks")
 public class TaskController {
 
-    @Autowired
+    @Autowired // Autowired annotation is used to inject the object dependency implicitly.
     private TaskService service; // import task service
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping // @PostMapping annotation handles the HTTP POST requests matched with given URI expression.
+    @ResponseStatus(HttpStatus.CREATED) // @ResponseStatus annotation is used to set the response status code.
     public Task createTask(@RequestBody Task task) {
         return service.addTask(task);
     }
 
-    @GetMapping
-    public List<Task> getTasks() {
+    @GetMapping // @GetMapping annotation handles the HTTP GET requests matched with given URI expression.
+    public List<Task> getTasks() { // get all tasks
+
         return service.findAllTasks();
     }
 
-    @GetMapping("/{taskId}")
+    @GetMapping("/{taskId}") // @PathVariable annotation is used to bind a method parameter or method return value to a URI template variable.
     public Task getTask(@PathVariable String taskId){
         return service.getTaskByTaskId(taskId);
     }

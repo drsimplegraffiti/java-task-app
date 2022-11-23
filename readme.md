@@ -1,3 +1,6 @@
+
+This project is heavily commented to assist in learning java
+
 #### Project Setup 
 Go to start.spring.io, choose the below settings and download the zip file
 
