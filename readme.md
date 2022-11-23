@@ -7,8 +7,8 @@ Go to start.spring.io, choose the below settings and download the zip file
 > Lombok - is a Java annotation library which helps to reduce boilerplate code.
 > Spring mongodb - is the mongodb dependency
 
+![sp](https://user-images.githubusercontent.com/70065792/203532402-e6f8eed6-9b9e-4116-a5eb-052605dedb0d.png)
 
-![](../../../Desktop/sp.png)
 
 
 ---
