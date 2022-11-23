@@ -2,7 +2,7 @@
 
 #### Create a new task
 > localhost:7000/tasks POST
-```aidl
+```json
 {
 "description":"Task 1",
 "storyPoint":5,
@@ -11,7 +11,7 @@
 }
 ```
 #### Response
-```aidl
+```json
 {
         "taskId": "5a3bd0e0",
         "description": "Task 4",
@@ -38,7 +38,7 @@
 
 #### Update a task
 > localhost:7000/tasks
-```aidl
+```json
 {
     "taskId":"e2d006e9",
     "description":"updated 2",
