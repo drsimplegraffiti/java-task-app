@@ -13,6 +13,41 @@ Go to start.spring.io, choose the below settings and download the zip file
 
 ---
 
+
+##### Getting and adding dependencies @
+Go to https://mvnrepository.com/
+
+Select the dependencies you need and copy the maven dependency code.
+```xml
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+Paste the code in the pom.xml file in the dependencies section.
+
+Then run the following command in the terminal:
+```bash
+mvn clean install
+```
+
+Or you can use the following command to add the dependencies directly to the pom.xml file:
+```bash
+mvn dependency:get -Dartifact=io.springfox:springfox-swagger-ui:2.9.2
+```
+
+Or Click on the Maven button and click on the refresh button to update the dependencies.
+
+##### Change the application port @ application.properties
+```
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/telu
+spring.data.mongodb.database=telu
+server.port=3456
+```
+
+---
+
 #### Conencting java app to mongodb
 In the `src/main/resources` folder create an `application.yml` file and configure
 ```yml
